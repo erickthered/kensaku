@@ -11,29 +11,32 @@ import (
 type InvertedIndex map[string][]int
 
 func main() {
-	documents := []string{
-		"Go is an open source programming language.",
-		"Go makes it easy to build simple, reliable, and efficient software.",
-		"The Go programming language is efficient and fast.",
+	if len(os.Args) == 1 {
+		fmt.Println("Usage: kensaku <serve|index>")
+		return
 	}
 
-	index := make(InvertedIndex)
+	switch os.Args[1] {
+	case "serve":
+		documents := []string{
+			"Go is an open source programming language.",
+			"Go makes it easy to build simple, reliable, and efficient software.",
+			"The Go programming language is efficient and fast.",
+		}
 
-	for i, document := range documents {
-		tokens := Tokenize(document)
-		AddToIndex(index, i, tokens)
-	}
+		index := make(InvertedIndex)
 
-	// Add HTTP library to handle search on indexed documents
-	http.HandleFunc("/search", searchHandler(index, documents))
-	http.ListenAndServe(":8080", nil)
+		for i, document := range documents {
+			tokens := Tokenize(document)
+			AddToIndex(index, i, tokens)
+		}
 
-	query := os.Args[1]
-	results := SearchIndex(index, query)
-
-	fmt.Println("Search results for: ", query)
-	for _, id := range results {
-		fmt.Printf("Document %d : %s\n", id, documents[id])
+		// Add HTTP library to handle search on indexed documents
+		fmt.Println("Initializing web server on port 8080")
+		http.HandleFunc("/search", searchHandler(index, documents))
+		http.ListenAndServe(":8080", nil)
+	default:
+		fmt.Println("Usage: kensaku <serve|index>")
 	}
 }
 
