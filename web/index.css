@@ -1,0 +1,10 @@
+.results-wrapper {
+    visibility: hidden;
+}
+.result-title {
+    font-weight: bold;
+}
+.summary {
+    font-size: 0.5em;
+    margin-bottom: 30px;
+}
