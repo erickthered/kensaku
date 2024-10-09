@@ -1,13 +1,11 @@
 package main
 
 import (
-	"strings"
-	"unicode"
+	"regexp"
 )
 
 // function to tokenize a string
 func Tokenize(text string) []string {
-	return strings.FieldsFunc(text, func(c rune) bool {
-		return !unicode.IsLetter(c) && !unicode.IsNumber(c)
-	})
+	re := regexp.MustCompile(`\w+('[d,m,s,t])?`)
+	return re.FindAllString(text, -1)
 }
