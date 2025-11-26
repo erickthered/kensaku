@@ -19,12 +19,15 @@ go run . index test_files/example1.txt
 go run . index test_files/example2.txt
 go run . index test_files/example3.txt
 go run . index test_files/example4.txt
-go run . index test_files/news.html
 ```
 
 ## Indexing URLs and HTML files
 
-TBD
+As of now, only HTML files can be indexed
+
+```bash
+go run . index test_files/news.html
+```
 
 ## Indexing Images
 
@@ -51,5 +54,15 @@ TBD
 TBD
 
 ## Indexing compressed files?
+
+TBD
+
+## Indexing Social Network feeds?
+
+### X.com
+
+TBD
+
+### Faceboook
 
 TBD

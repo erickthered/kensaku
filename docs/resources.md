@@ -1,0 +1,15 @@
+# Links
+
+* [Organizing a Go Module](https://go.dev/doc/modules/layout)
+* [Lingua Go](https://github.com/pemistahl/lingua-go)
+* [Extract links from a web page using Go lang](https://stackoverflow.com/questions/11080936/extract-links-from-a-web-page-using-go-lang?rq=3)
+* [Snowball stemming library for Go](https://github.com/kljensen/snowball?tab=readme-ov-file)
+* [Prose a natural language processing library](https://github.com/jdkato/prose)
+* [getlang an old fast natural language detection in Go](https://github.com/rylans/getlang)
+* [Implementation of the Porter's stemming algorithm](https://github.com/agonopol/go-stem)
+* [Porter's stemming algorithm](https://tartarus.org/martin/PorterStemmer/def.txt)
+* [Sentences, converts a blob of text into a list of sentences.](https://github.com/neurosnap/sentences?tab=readme-ov-file)
+* [n-grams in NLP](https://medium.com/@abhishekjainindore24/n-grams-in-nlp-a7c05c1aff12)
+* [Speech and Language Processing](https://web.stanford.edu/~jurafsky/slp3/)
+* [Lemmingo - Lemmatization library in Go](https://github.com/smileart/lemmingo)
+* [Textcat - A go package for n-gram based text categorization](https://github.com/pebbe/textcat)
